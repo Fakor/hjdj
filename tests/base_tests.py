@@ -20,6 +20,27 @@ class BaseTests(unittest.TestCase):
 
         self.assertEqual(tc.compares_done("Test"), 4)
 
+    def test_compare_multiple(self):
+        tc = hjdj.TestCase.TestCase()
+        tc.compare("pass", "pass", "Test1")
+        tc.compare("pass", "pass", "Test2")
+
+        self.assertTrue(tc.is_pass())
+
+        tc.compare("fail", "FAIL", "Test3")
+        tc.compare("fail", "FAIL", "Test4")
+
+        self.assertFalse(tc.is_pass())
+
+        self.assertTrue(tc.is_pass("Test1", "Test2"))
+        self.assertTrue(tc.is_pass("Test1"))
+        self.assertTrue(tc.is_pass("Test2"))
+
+        self.assertFalse(tc.is_pass("Test1", "Test2", "Test3"))
+        self.assertFalse(tc.is_pass("Test1", "Test2", "Test4"))
+        self.assertFalse(tc.is_pass("Test3"))
+        self.assertFalse(tc.is_pass("Test4"))
+
 
 if __name__ == '__main__':
     unittest.main()

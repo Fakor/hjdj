@@ -18,5 +18,10 @@ class TestCase:
     def compares_done(self, name):
         return self.comparisons[name][DONE]
 
-    def is_pass(self, name):
-        return len(self.comparisons[name][FAIL]) == 0
+    def is_pass(self, *names):
+        if len(names) == 0:
+            names = self.comparisons.keys()
+        for name in names:
+            if len(self.comparisons[name][FAIL]) != 0:
+                return False
+        return True
