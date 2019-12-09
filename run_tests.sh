@@ -15,6 +15,3 @@ if [ $# -eq 0 ]; then
 else
    python -m unittest $@
 fi
-
-
-
