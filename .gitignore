@@ -8,5 +8,9 @@ venv/
 # Pycharm
 .idea
 
+# C++
+obj
+bin
+
 # Other
 *~
