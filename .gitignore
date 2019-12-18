@@ -12,5 +12,9 @@ venv/
 obj
 bin
 
+# Codeblocks
+*.layout
+*.depend
+
 # Other
 *~
