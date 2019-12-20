@@ -5,6 +5,7 @@ namespace hjdj {
 Receiver::Receiver(uint16_t port, size_t max_buffer_size)
 : port_{port}, max_buffer_size_{max_buffer_size}
 {
+    LOG(INFO) << "Setting up receiver for port " << port;
     addrlen_ = sizeof(address_);
     if((server_fd_ = socket(AF_INET, SOCK_STREAM, 0)) == 0){
         throw std::runtime_error("socket fail");
@@ -36,6 +37,7 @@ Receiver::Receiver(uint16_t port, size_t max_buffer_size)
     {
         throw std::runtime_error("accept failed");
     }
+    LOG(INFO) << "Receiver for port " << port << " established!";
 }
 
 Receiver::~Receiver()

@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="static" />
+		<Option title="hjdj" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/static" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/hjdj" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="2" />
@@ -21,7 +21,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/static" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/hjdj" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
 				<Option type="2" />
@@ -38,10 +38,10 @@
 			</Target>
 		</Build>
 		<Unit filename="include/Receiver.h" />
-		<Unit filename="main.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="include/Sender.h" />
+		<Unit filename="include/easylogging/easylogging++.h" />
 		<Unit filename="src/Receiver.cpp" />
+		<Unit filename="src/Sender.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

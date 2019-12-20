@@ -16,5 +16,9 @@ bin
 *.layout
 *.depend
 
+# easyloggs
+logs
+
 # Other
 *~
+a.out

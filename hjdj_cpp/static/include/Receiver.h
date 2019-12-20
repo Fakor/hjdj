@@ -9,6 +9,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
+#include "easylogging/easylogging++.h"
+
 namespace hjdj {
 
 class Receiver
