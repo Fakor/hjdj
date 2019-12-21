@@ -11,10 +11,12 @@ venv/
 # C++
 obj
 bin
+lib
 
 # Codeblocks
 *.layout
 *.depend
+*.cbp
 
 # easyloggs
 logs
