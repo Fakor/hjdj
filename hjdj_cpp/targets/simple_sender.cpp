@@ -11,5 +11,5 @@ int main(int argc, char const *argv[]){
   }
   unsigned int port = atoi(argv[1]);
   char const *ip_address = argv[2];
-  hjdj::Sender sender(port, 1024, ip_address);
+  hjdj::Sender<int> sender(port, 1024, ip_address);
 }

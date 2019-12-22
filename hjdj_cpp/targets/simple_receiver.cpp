@@ -10,5 +10,5 @@ int main(int argc, char const *argv[]){
     return -1;
   }
   unsigned int port = atoi(argv[1]);
-  hjdj::Receiver receiver(port, 1024);
+  hjdj::Receiver<int> receiver(port, 1024);
 }

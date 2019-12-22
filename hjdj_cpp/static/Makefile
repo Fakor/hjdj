@@ -2,9 +2,7 @@ INCLUDE_DIR=include
 CC=g++
 CFLAGS=-Wall -std=c++1z -Iinclude
 
-_OBJECTS=Receiver.o $\
-	 Sender.o $\
-	 easylogging/easylogging++.o
+_OBJECTS=easylogging/easylogging++.o $\
 
 _DEPS=Receiver.h $\
       Sender.h $\
