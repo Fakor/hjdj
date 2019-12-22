@@ -37,7 +37,7 @@ Receiver::Receiver(uint16_t port, size_t max_buffer_size)
     {
         throw std::runtime_error("accept failed");
     }
-    LOG(INFO) << "Receiver for port " << port_ << " established!";
+    LOG(INFO) << "Connection with sender established!";
 }
 
 Receiver::~Receiver()
