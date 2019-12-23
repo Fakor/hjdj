@@ -6,6 +6,7 @@
 
 #include <stdexcept>
 
+#include <unistd.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 
@@ -80,7 +81,7 @@ Receiver<T>::~Receiver()
 }
 
 template <class T>
-T Receiver<T>::ReadNext(){
+const T& Receiver<T>::ReadNext(){
     int valread = read(new_socket_, &current_value_, sizeof(T));
     return current_value_;
 }
