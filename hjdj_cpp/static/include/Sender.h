@@ -18,6 +18,7 @@ class Sender
         Sender(uint16_t port, size_t max_buffer_size, char const *ip_address);
         virtual ~Sender();
 
+        void Send(const T& value);
     private:
         uint16_t port_;
         size_t max_buffer_size_;
@@ -57,6 +58,10 @@ Sender<T>::~Sender()
     //dtor
 }
 
+template<class T>
+void Sender<T>::Send(const T& value){
+    send(sock_, &value, sizeof(T), 0);
+}
 
 }
 

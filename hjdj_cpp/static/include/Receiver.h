@@ -20,7 +20,7 @@ class Receiver
         Receiver(uint16_t port, size_t max_buffer_size);
         virtual ~Receiver();
 
-    protected:
+        const T& ReadNext();
 
     private:
         uint16_t port_;
@@ -31,6 +31,7 @@ class Receiver
         int new_socket_;
         int addrlen_;
         struct sockaddr_in address_;
+        T current_value_;
 };
 
 template <class T>
@@ -78,6 +79,11 @@ Receiver<T>::~Receiver()
     //dtor
 }
 
+template <class T>
+T Receiver<T>::ReadNext(){
+    int valread = read(new_socket_, &current_value_, sizeof(T));
+    return current_value_;
+}
 
 }
 

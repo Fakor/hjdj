@@ -11,4 +11,8 @@ int main(int argc, char const *argv[]){
   }
   unsigned int port = atoi(argv[1]);
   hjdj::Receiver<int> receiver(port, 1024);
+
+  int v = receiver.ReadNext();
+
+  LOG(INFO) << "Received: " << v;
 }
