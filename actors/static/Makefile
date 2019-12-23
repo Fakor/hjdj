@@ -36,4 +36,5 @@ $(ODIR):
 cleanall: clean
 
 clean:
-	rm -f $(ODIR)/*.o $(TARGET)
+	find $(ODIR) -type f -name "*.o" -delete
+	rm -f $(TARGET)
