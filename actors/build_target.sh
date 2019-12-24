@@ -2,4 +2,4 @@
 
 TARGET=$1
 
-g++ $TARGET -Istatic/include -Lstatic/lib -lhjdj
+g++ $TARGET -Istatic/include -Llib -lhjdj
