@@ -1,5 +1,4 @@
-#include "Receiver.h"
-#include "easylogging/easylogging++.h"
+#include "hjdj_includes.h"
 
 
 INITIALIZE_EASYLOGGINGPP

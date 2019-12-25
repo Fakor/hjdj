@@ -7,8 +7,9 @@ CFLAGS=-Wall -std=c++1z -I$(INCLUDE_DIR_STATIC)
 _OBJECTS_STATIC=easylogging/easylogging++.o $\
 
 _DEPS_STATIC=Receiver.h $\
-      Sender.h $\
-      easylogging/easylogging++.h
+	     Sender.h $\
+	     easylogging/easylogging++.h $\
+	     hjdj_includes.h
 
 DEPS_STATIC=$(patsubst %,$(INCLUDE_DIR_STATIC)/%,$(_DEPS_STATIC))
 
