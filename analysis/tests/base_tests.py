@@ -1,11 +1,11 @@
 import unittest
 
-import hjdj.TestCase
+from hjdj_analysis.HjdjTestCase import TestCase
 
 
 class BaseTests(unittest.TestCase):
     def test_compare(self):
-        tc = hjdj.TestCase.TestCase()
+        tc = TestCase()
         self.assertTrue(tc.compare(3, 3, "Test"))
         self.assertTrue(tc.compare(4, 4, "Test"))
         self.assertTrue(tc.compare(1, 1, "Test"))
@@ -21,7 +21,7 @@ class BaseTests(unittest.TestCase):
         self.assertEqual(tc.compares_done("Test"), 4)
 
     def test_compare_multiple(self):
-        tc = hjdj.TestCase.TestCase()
+        tc = TestCase()
         tc.compare("pass", "pass", "Test1")
         tc.compare("pass", "pass", "Test2")
 

@@ -1,12 +1,12 @@
 import unittest
 
 from tests.helper.constants import *
-import hjdj.JsonParser
+from hjdj_analysis import JsonParser
 
 
 class JsonParserTests(unittest.TestCase):
     def test_size(self):
-        parser=hjdj.JsonParser.JsonParser(RESOURCE_FOLDER + "/simple.json")
+        parser=JsonParser.JsonParser(RESOURCE_FOLDER + "/simple.json")
 
         self.assertEqual(parser.size(), 4)
 
